@@ -15,14 +15,12 @@ namespace AutomationFramework.Tests
         [Fact]
         public void SearchCorrectStudentCode()
         {
-            Driver.Url = "https://hutechcheckin.com/";
             searchPage.SearchByStudentCode("1611060042");
         }
 
         [Fact]
         public void SearchWrongStudentCode()
         {
-            Driver.Url = "https://hutechcheckin.com/";
             searchPage.SearchByStudentCode("1111111111");
         }
     }

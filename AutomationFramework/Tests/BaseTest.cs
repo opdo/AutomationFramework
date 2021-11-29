@@ -10,6 +10,7 @@ namespace AutomationFramework.Tests
         public BaseTest()
         {
             Driver = new ChromeDriver();
+            Driver.Url = "https://hutechcheckin.com/";
         }
     }
 }
