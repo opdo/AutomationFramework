@@ -1,19 +1,12 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationFramework.Pages
 {
-    public class SearchPage
+    public class SearchPage : BasePage
     {
-        private IWebDriver driver;
 
-        public SearchPage(IWebDriver driver)
+        public SearchPage(IWebDriver driver) : base(driver)
         {
-            this.driver = driver;
         }
 
         // Element
