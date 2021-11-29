@@ -1,23 +1,14 @@
 ﻿using AutomationFramework.Pages;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace AutomationFramework.Tests
 {
-    public class SearchTest
+    public class SearchTest : BaseTest
     {
-        public IWebDriver Driver;
         readonly SearchPage searchPage;
 
         public SearchTest()
         {
-            Driver = new ChromeDriver();
             searchPage = new SearchPage(Driver);
         }
 
@@ -26,6 +17,13 @@ namespace AutomationFramework.Tests
         {
             Driver.Url = "https://hutechcheckin.com/";
             searchPage.SearchByStudentCode("1611060042");
+        }
+
+        [Fact]
+        public void SearchWrongStudentCode()
+        {
+            Driver.Url = "https://hutechcheckin.com/";
+            searchPage.SearchByStudentCode("1111111111");
         }
     }
 }
