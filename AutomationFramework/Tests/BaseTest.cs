@@ -1,6 +1,5 @@
-﻿using AutomationFramework.WebDriver;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using AutomationFramework.Services;
+using AutomationFramework.WebDriver;
 using System;
 
 namespace AutomationFramework.Tests
@@ -11,8 +10,8 @@ namespace AutomationFramework.Tests
 
         public BaseTest()
         {
-            Browser = new Browser();
-            Browser.Go("https://hutechcheckin.com/");
+            Browser = new Browser(ConfigService.GetValue("browser"));
+            Browser.Go(ConfigService.GetValue("url"));
         }
 
         public void Dispose()
