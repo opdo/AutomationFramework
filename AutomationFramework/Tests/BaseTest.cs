@@ -1,9 +1,10 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 
 namespace AutomationFramework.Tests
 {
-    public class BaseTest
+    public class BaseTest : IDisposable
     {
         public IWebDriver Driver;
 
@@ -11,6 +12,15 @@ namespace AutomationFramework.Tests
         {
             Driver = new ChromeDriver();
             Driver.Url = "https://hutechcheckin.com/";
+        }
+
+        public void Dispose()
+        {
+            if (Driver != null)
+            {
+                Driver.Close();
+                Driver.Dispose();
+            }
         }
     }
 }

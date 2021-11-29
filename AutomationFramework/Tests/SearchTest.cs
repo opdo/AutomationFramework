@@ -18,6 +18,7 @@ namespace AutomationFramework.Tests
         public void SearchCorrectStudentCode()
         {
             searchPage.SearchByStudentCode("1611060042");
+            searchPage.WaitSpinner();
             int totalRecords = resultPage.GetTotalRecords();
             Assert.True(totalRecords > 0);
         }

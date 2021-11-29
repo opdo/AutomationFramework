@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace AutomationFramework.Pages
 {
@@ -11,9 +13,15 @@ namespace AutomationFramework.Pages
             this.driver = driver;
         }
 
-        public void WaitSpinner()
-        {
+        // XPath
+        public By XPathSpinner = By.XPath("//div[@class = 'center']/i[contains(@class, 'fa-spin')]");
 
+        // Method
+        public void WaitSpinner(int timeout = 10)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeout));
+            wait.Until(drv => drv.FindElement(XPathSpinner).Displayed);
+            wait.Until(drv => !drv.FindElement(XPathSpinner).Displayed);
         }
     }
 }
