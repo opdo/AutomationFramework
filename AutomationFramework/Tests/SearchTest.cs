@@ -10,10 +10,13 @@ namespace AutomationFramework.Tests
 
         public SearchTest()
         {
-            searchPage = new SearchPage(Driver);
-            resultPage = new ResultPage(Driver);
+            searchPage = new SearchPage(Browser);
+            resultPage = new ResultPage(Browser);
         }
 
+        /// <summary>
+        /// Test student have more than 1 cerf
+        /// </summary>
         [Fact]
         public void SearchCorrectStudentCode()
         {
@@ -23,6 +26,9 @@ namespace AutomationFramework.Tests
             Assert.True(totalRecords > 0);
         }
 
+        /// <summary>
+        /// Test wrong student code
+        /// </summary>
         [Fact]
         public void SearchWrongStudentCode()
         {

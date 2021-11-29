@@ -31,4 +31,10 @@
     <ProjectReference Include="..\AutomationFramework.WebDriver\AutomationFramework.WebDriver.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="testhost.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

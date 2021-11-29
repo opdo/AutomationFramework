@@ -13,7 +13,7 @@ namespace AutomationFramework.Pages
 
         // Element
         public By XPathCef = By.XPath("//div[@class = 'card event-item']");
-        public List<IWebElement> ListCef => browser.GetElement(XPathCef);
+        public List<IWebElement> ListCef => browser.GetElements(XPathCef);
 
         // Method
         public int GetTotalRecords()
