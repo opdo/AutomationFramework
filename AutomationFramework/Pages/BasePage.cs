@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AutomationFramework.WebDriver;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 
@@ -6,11 +7,11 @@ namespace AutomationFramework.Pages
 {
     public class BasePage
     {
-        protected IWebDriver driver;
+        protected Browser browser;
 
-        public BasePage(IWebDriver driver)
+        public BasePage(Browser browser)
         {
-            this.driver = driver;
+            this.browser = browser;
         }
 
         // XPath
@@ -19,7 +20,7 @@ namespace AutomationFramework.Pages
         // Method
         public void WaitSpinner(int timeout = 10)
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeout));
+            var wait = new WebDriverWait(browser.Driver, TimeSpan.FromSeconds(timeout));
             wait.Until(drv => drv.FindElement(XPathSpinner).Displayed);
             wait.Until(drv => !drv.FindElement(XPathSpinner).Displayed);
         }
