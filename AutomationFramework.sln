@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationFramework", "AutomationFramework\AutomationFramework.csproj", "{0C6E3A18-499D-4D57-9B78-D103A11322FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomationFramework", "AutomationFramework\AutomationFramework.csproj", "{0C6E3A18-499D-4D57-9B78-D103A11322FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationFramework.WebDriver", "AutomationFramework.WebDriver\AutomationFramework.WebDriver.csproj", "{93BE0AF8-DED1-41FD-B291-886FFD460DDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0C6E3A18-499D-4D57-9B78-D103A11322FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C6E3A18-499D-4D57-9B78-D103A11322FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C6E3A18-499D-4D57-9B78-D103A11322FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BE0AF8-DED1-41FD-B291-886FFD460DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BE0AF8-DED1-41FD-B291-886FFD460DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BE0AF8-DED1-41FD-B291-886FFD460DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BE0AF8-DED1-41FD-B291-886FFD460DDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
